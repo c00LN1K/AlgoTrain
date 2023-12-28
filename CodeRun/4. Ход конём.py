@@ -1,13 +1,11 @@
 n, m = map(int, input().split())
 
+dp = [[0] * (m + 2) for i in range(n + 2)]
 
-def moves(curr_i, curr_j):
-    if curr_i > n or curr_j > m:
-        return 0
-    elif curr_i == n and curr_j == m:
-        return 1
-    else:
-        return moves(curr_i + 2, curr_j + 1) + moves(curr_i + 1, curr_j + 2)
+dp[2][2] = 1
 
+for i in range(3, n + 2):
+    for j in range(3, m + 2):
+        dp[i][j] = dp[i - 1][j - 2] + dp[i - 2][j - 1]
 
-print(moves(1, 1))
+print(dp[-1][-1])
