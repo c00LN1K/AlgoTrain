@@ -2,7 +2,7 @@ from collections import defaultdict
 
 d = defaultdict(int)
 
-with open('input.txt') as file:
+with open('../../../../Alging by Yandex/1/4/input.txt') as file:
     for line in file.readlines():
         if line.startswith('DEPOSIT'):
             _, user, amount = line.split()
