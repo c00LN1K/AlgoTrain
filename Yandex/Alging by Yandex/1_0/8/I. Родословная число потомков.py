@@ -25,4 +25,3 @@ count_children(root)
 for parent, count in sorted(d.items()):
     print(parent, count)
 
-

@@ -25,4 +25,3 @@ count_levels(root, 0)
 for parent, level in sorted(d.items()):
     print(parent, level)
 
-
