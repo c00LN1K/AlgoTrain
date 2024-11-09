@@ -30,12 +30,12 @@ ans2 = max(check(lst1, right), check(lst2, w - right))
 
 print(min(ans1, ans2))
 
-# d = {}
+# children = {}
 #
 #
 # def check(line):
-#     if line in d:
-#         return d[line]
+#     if line in children:
+#         return children[line]
 #     k = 1
 #     t = 0
 #     for i in range(len(lst1)):
@@ -43,8 +43,8 @@ print(min(ans1, ans2))
 #             t += lst1[i] + 1
 #         else:
 #             if lst1[i] > line:
-#                 d[line] = float('-inf')
-#                 return d[line]
+#                 children[line] = float('-inf')
+#                 return children[line]
 #             t = lst1[i] + 1
 #             k += 1
 #     k1 = 1
@@ -55,12 +55,12 @@ print(min(ans1, ans2))
 #             t += lst2[i] + 1
 #         else:
 #             if lst2[i] > line1:
-#                 d[line] = float('inf')
-#                 return d[line]
+#                 children[line] = float('inf')
+#                 return children[line]
 #             t = lst2[i] + 1
 #             k1 += 1
-#     d[line] = max(k, k1)
-#     return d[line]
+#     children[line] = max(k, k1)
+#     return children[line]
 #
 #
 # # left, right = max(lst1), w - max(lst2)
@@ -88,4 +88,4 @@ print(min(ans1, ans2))
 #                 #     left = mid
 #                 # else:
 #                 #     right = mid
-#     # print(min(d.values(), key=lambda x: float('inf') if x == float('-inf') else x))
+#     # print(min(children.values(), key=lambda x: float('inf') if x == float('-inf') else x))
