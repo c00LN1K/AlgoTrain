@@ -2,6 +2,7 @@ class Solution:
     def shortestPalindrome(self, s: str) -> str:
         count = self.kmp(s, s[::-1])
         return s[count:][::-1] + s
+
     def kmp(self, patt: str, txt: str) -> int:
         new_string = patt + '@' + txt
         pi = [0] * len(new_string)
@@ -19,6 +20,7 @@ class Solution:
                     pi[i] = 0
                     i += 1
         return pi[-1]
+
 
 print(Solution().shortestPalindrome('abbb'))
 
